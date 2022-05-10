@@ -39,4 +39,13 @@ object camion {
 	method ningunObjetoSuperaPeligrosidad(nivel){
 		return elementos.all({e=> e.nivelPeligrosidad()< nivel})
 	}
+	
+	//agregados camión
+	
+	method cosaMasPesada(){
+		return elementos.max({e=> e.peso()})
+	}
+	method pesos(){
+		
+	}
 }

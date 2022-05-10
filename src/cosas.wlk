@@ -63,7 +63,7 @@ object contenedor {
 	
 	method nivelPeligrosidad(){
 		if (not self.estaVacio()){
-			return elementos.max({e => e.nivelPeligrosidad()})
+			return elementos.max({e => e.nivelPeligrosidad()}).nivelPeligrosidad()
 		} else{
 			return 0
 		}
