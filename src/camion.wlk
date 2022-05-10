@@ -46,6 +46,10 @@ object camion {
 		return elementos.max({e=> e.peso()})
 	}
 	method pesos(){
-		
+		return elementos.map({e=> e.peso()})
+	}
+	
+	method tieneAlgoQuePesaEntre(min, max){
+		return elementos.peso().between(min, max)
 	}
 }

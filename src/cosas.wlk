@@ -22,11 +22,11 @@ object paqueteLadrillos{
 
 
 object arena {
-	var property peso 
+	var property peso = 1
 	method nivelPeligrosidad() = 1
 }
 
-object bateriaAntiarea {
+object bateriaAntiaerea {
 	var estaCargado = true
 	
 	method cambiarEstado(){
@@ -52,7 +52,13 @@ object bateriaAntiarea {
 object contenedor {
 	const elementos = []
 
+	method cargar(cosa){
+		elementos.add(cosa)
+	}
 	
+	method descargar(cosa){
+		elementos.remove(cosa)
+	}
 	method peso(){
 		return 100 + elementos.sum({e => e.peso()})
 	}

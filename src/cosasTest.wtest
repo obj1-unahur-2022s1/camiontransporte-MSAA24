@@ -1,2 +1,42 @@
 import camion.*
 import cosas.*
+
+
+test "peso ladrillos cantidad 50"{
+	paqueteLadrillos.cantLadrillos(50)
+	assert.equals(50*2, paqueteLadrillos.peso())
+	
+}
+
+test "bateria antiaerea nivel peligrosidad sin misiles"{
+	bateriaAntiaerea.cambiarEstado()
+	assert.equals(0, bateriaAntiaerea.nivelPeligrosidad())
+}
+
+test "peso de contenedor portuario con 100 ladrillos y 100 arena "{
+	paqueteLadrillos.cantLadrillos(100)
+	arena.peso(100)
+	contenedor.cargar(paqueteLadrillos)
+	contenedor.cargar(arena)
+	// 100 * 2 = cantidadLadrillos
+	//100 peso arena
+	//100 peso contenedor
+	assert.equals((100*2) + 100 + 100, contenedor.peso())
+	
+}
+
+test "nivel peligrosidad embalaje con residuos radioactivos con 30kg peso"{
+	residuosRadioactivos.peso(30)
+	embalajeSeguridad.embalarObjeto(residuosRadioactivos)
+	
+	assert.equals(100, embalajeSeguridad.nivelPeligrosidad())
+	
+}
+
+
+
+
+
+
+
+
