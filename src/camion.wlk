@@ -50,6 +50,6 @@ object camion {
 	}
 	
 	method tieneAlgoQuePesaEntre(min, max){
-		return elementos.peso().between(min, max)
+		return elementos.any({e=> e.peso().between(min, max)})
 	}
 }

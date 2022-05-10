@@ -4,13 +4,19 @@ object knightRider {
 }
 
 object bumblebee {
-	var modoRobot = false
+	var modoAuto = true
 	
 	method peso() = 800
-	method nivelPeligrosidad() = 10
+	method nivelPeligrosidad(){
+		if (not modoAuto){
+			return 30
+		}else{
+			return 15
+		}
+	}
 	
 	method cambiarModo(){
-		modoRobot = !modoRobot
+		modoAuto = !modoAuto
 	}
 }
 
@@ -18,6 +24,8 @@ object paqueteLadrillos{
 	var property cantLadrillos = 1
 	
 	method peso()= 2 * cantLadrillos
+	
+	method nivelPeligrosidad() = 2
 }
 
 
