@@ -1,5 +1,5 @@
 /*
- * Camión muy bien. Revisar el método objetosMasPeligrososQue(cosa)
+ * Camión muy bien. Revisar el método objetosMasPeligrososQue(cosa) :-)
  */
 import cosas.*
 

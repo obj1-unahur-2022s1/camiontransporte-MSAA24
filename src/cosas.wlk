@@ -1,5 +1,5 @@
 /*
- * Muy Bien todo las cosas. :-)
+ * Muy Bien todo las cosas :-)
  */
 object knightRider {
 	method peso() = 500
