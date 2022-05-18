@@ -1,3 +1,6 @@
+/*
+ * Camión muy bien. Revisar el método objetosMasPeligrososQue(cosa)
+ */
 import cosas.*
 
 object camion {
@@ -31,7 +34,12 @@ object camion {
 	}
 	
 	method objetosMasPeligrososQue(cosa){
-		return elementos.filter( {e => e.nivelPeligrosidad() > cosa.nivelPeligrosidad()} )
+		/*
+		 * acá podes reutilizar objetosQueSuperanPeligrosidad(nivel)
+		 * 
+		 */
+		//return elementos.filter( {e => e.nivelPeligrosidad() > cosa.nivelPeligrosidad()} )
+		return self.objetosQueSuperanPeligrosidad(cosa.nivelPeligrosidad())
 	}
 	method puedeCircularEnRuta(nivelMaximoPeligrosidad){
 		return (not self.excedidoDePeso()) and self.ningunObjetoSuperaPeligrosidad(nivelMaximoPeligrosidad)
